@@ -15,12 +15,12 @@ public class CliStandards {
                          _/ |\\__,_| \\_/ \\__,_|     |_|_| |_|/ |\\___|\\___|\\__|_|\\___/|_| |_|
                         |__/                              |__/ \s
                 %s""".formatted(
-                        CliColors.ANSI_GREEN,
-                        CliColors.BLUE_BRIGHT,
-                        CliColors.ANSI_GREEN,
-                        CliColors.BLUE_BRIGHT,
-                        CliColors.ANSI_GREEN,
-                        CliColors.ANSI_RESET
+                        CliColors.ANSI_GREEN.code(),
+                        CliColors.BLUE_BRIGHT.code(),
+                        CliColors.ANSI_GREEN.code(),
+                        CliColors.BLUE_BRIGHT.code(),
+                        CliColors.ANSI_GREEN.code(),
+                        CliColors.ANSI_RESET.code()
             );
 
     /**
@@ -29,7 +29,7 @@ public class CliStandards {
      * @return
      */
     public static String title(String title){
-        return CliColors.ANSI_YELLOW+"╔══════════════════════════════════════ "+CliColors.ANSI_WHITE+title+CliColors.ANSI_YELLOW+" ══════════════════════════════════════╗ "+CliColors.ANSI_RESET;
+        return CliColors.ANSI_YELLOW.code()+"╔══════════════════════════════════════ "+CliColors.ANSI_WHITE.code()+title+CliColors.ANSI_YELLOW.code()+" ══════════════════════════════════════╗ "+CliColors.ANSI_RESET.code();
     }
 
     /**
@@ -43,7 +43,7 @@ public class CliStandards {
         for (int i = 0; i < title.length(); i++) {
             filling.append("=");
         }
-        return CliColors.ANSI_YELLOW+"╚══════════════════════════════════════"+filling+"══════════════════════════════════════╝ "+CliColors.ANSI_RESET;
+        return CliColors.ANSI_YELLOW.code()+"╚══════════════════════════════════════"+filling+"══════════════════════════════════════╝ "+CliColors.ANSI_RESET.code();
     }
 
     public static ChainedString initBlock(String title){
@@ -62,14 +62,14 @@ public class CliStandards {
             this.started = true;
         }
 
-        public ChainedString withBody(String body){
+        public ChainedString withBody(String body,CliColors bodyColor ){
             if(!this.started){
-                throw new RuntimeException("you can't add more text after closin the chain");
+                throw new RuntimeException("you can't add more text after closing the chain");
             }
-            String result = Arrays.stream(body.split(System.lineSeparator()))
-                    //.filter(/* filter for lines you are interested in*/)
-                    .map(s -> s = "║"+s+"║")
-                    .collect(Collectors.joining());
+
+            String result = body.lines().map((line) -> CliColors.ANSI_YELLOW.code()+"║"+bodyColor.code()+line+CliColors.ANSI_YELLOW.code()+"║").collect(Collectors.joining("\n"));
+
+
             this.text+="\n"+result+"\n";
             return this;
         }
@@ -82,7 +82,7 @@ public class CliStandards {
             for (int i = 0; i < titleLength; i++) {
                 filling.append("═");
             }
-            this.text+=CliColors.ANSI_YELLOW+"╚══════════════════════════════════════"+filling+"══════════════════════════════════════╝ \n"+CliColors.ANSI_RESET;
+            this.text+=CliColors.ANSI_YELLOW.code()+"╚══════════════════════════════════════"+filling+"══════════════════════════════════════╝ \n"+CliColors.ANSI_RESET.code();
             return this;
         }
 

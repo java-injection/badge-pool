@@ -14,7 +14,7 @@ public class Main {
         //String text = new CliStandards.ChainedString("Developed by").withBody(CliStandards.JAVA_INJECTION).close().build();
 
         String welcomeMessage = CliStandards.initBlock("Developed by").
-                withBody(CliStandards.JAVA_INJECTION).
+                withBody(CliStandards.JAVA_INJECTION, CliColors.ANSI_GREEN).
                 close().
                 build();
         System.out.println(welcomeMessage);
