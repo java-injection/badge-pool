@@ -2,6 +2,7 @@ package com.ji.badge;
 
 import com.ji.badge.cli.CliColors;
 import com.ji.badge.cli.CliStandards;
+import com.ji.badge.server.BadgePoolServer;
 import org.fusesource.jansi.AnsiConsole;
 
 public class Main {
@@ -21,5 +22,8 @@ public class Main {
                 close().br().addLine().
                 build();
         System.out.println("\n"+welcomeMessage);
+        System.out.println("[BadgePool] starting server..");
+        BadgePoolServer.getInstance().start();
+        System.out.println("-- end --");
     }
 }
