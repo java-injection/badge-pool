@@ -5,6 +5,8 @@ import com.ji.badge.cli.CliStandards;
 import com.ji.badge.server.BadgePoolServer;
 import org.fusesource.jansi.AnsiConsole;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         AnsiConsole.systemInstall();
@@ -25,5 +27,18 @@ public class Main {
         System.out.println("[BadgePool] starting server..");
         BadgePoolServer.getInstance().start();
         System.out.println("-- end --");
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            String command = scanner.nextLine();
+            if(command.equals("quit")){
+                BadgePoolServer.getInstance().stop();
+            }else if(command.equals("exit")){
+                System.out.println(("bye."));
+                return;
+            } else{
+                System.out.println("[BadgePool] comando sconosciuto..");
+            }
+        }
+
     }
 }

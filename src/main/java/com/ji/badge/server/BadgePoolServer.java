@@ -1,10 +1,16 @@
 package com.ji.badge.server;
 
+import com.google.gson.Gson;
 import com.ji.badge.cli.CliColors;
+import com.ji.badge.server.data.TestData;
 import io.javalin.Javalin;
+
+import java.util.Date;
 
 public class BadgePoolServer {
     private static BadgePoolServer _instance = null;
+    private Javalin server = null;
+    private Thread serverThread;
 
     private BadgePoolServer(){
 
@@ -18,8 +24,33 @@ public class BadgePoolServer {
     }
 
     public void start(){
-        Javalin app = Javalin.create().start(7070);
-        app.get("/", ctx -> ctx.result("Hello World"));
-        System.out.println("[BadgePool] starting server../t" + CliColors.GREEN_BRIGHT.code()+"SUCCESS"+CliColors.ANSI_RESET.code());
+        serverThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                server = Javalin.create().start(7070);
+                server.get("/", ctx -> ctx.result("Hello World"));
+                server.get("/test", ctx -> ctx.result(generateTestData()));
+                System.out.println("[BadgePool] starting server..\t" + CliColors.GREEN_BRIGHT.code()+"SUCCESS"+CliColors.ANSI_RESET.code());
+            }
+        });
+        server = Javalin.create().start(7070);
+        server.get("/", ctx -> ctx.result("Hello World"));
+
+        server.get("/test", ctx -> ctx.result(generateTestData()));
+        System.out.println("[BadgePool] starting server..\t" + CliColors.GREEN_BRIGHT.code()+"SUCCESS"+CliColors.ANSI_RESET.code());
+
+    }
+
+    public void stop(){
+        System.out.println("[BadgePool] stopping the server..\t");
+        server.stop();
+        serverThread.interrupt();
+        System.out.println("[BadgePool] stopping the server..\t" + CliColors.RED_BLOODY.code()+"SUCCESS"+CliColors.ANSI_RESET.code());
+    }
+
+    public String generateTestData(){
+        Gson gson = new Gson();
+        TestData td = new TestData(new Date(), true, 33);
+        return gson.toJson(td);
     }
 }
