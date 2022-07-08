@@ -16,7 +16,10 @@ public class Main {
         String welcomeMessage = CliStandards.initBlock("Developed by").
                 withBody(CliStandards.JAVA_INJECTION, CliColors.ANSI_GREEN).
                 close().
+                br().addLine().br().
+                newBlock(CliStandards.BADGE_POOL, CliColors.RED_BLOODY).
+                close().br().addLine().
                 build();
-        System.out.println(welcomeMessage);
+        System.out.println("\n"+welcomeMessage);
     }
 }
