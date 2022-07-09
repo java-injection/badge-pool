@@ -28,7 +28,7 @@ public class Main {
         BadgePoolServer.getInstance().start();
         System.out.println("-- end --");
         Scanner scanner = new Scanner(System.in);
-        while(true){
+        while(scanner.hasNextLine()){
             String command = scanner.nextLine();
             if(command.equals("quit")){
                 BadgePoolServer.getInstance().stop();
