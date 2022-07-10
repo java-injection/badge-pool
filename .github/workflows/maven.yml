@@ -29,6 +29,8 @@ jobs:
         cache: maven
     - name: Deploy
       uses: simontunnat/action-maven-deploy@v1.1
+      env:
+        MAVEN_OPTS: -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3
       with:
         username: ${{ secrets.MAVEN_NAME }}
         password: ${{ secrets.MAVEN_TOKEN }}
