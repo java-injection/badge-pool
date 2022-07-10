@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="init">
+    <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="uncommented useMavenSettingsForAuth">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657292858337</updated>
       <workItem from="1657292860029" duration="25355000" />
-      <workItem from="1657365762869" duration="18835000" />
+      <workItem from="1657365762869" duration="18995000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657301875211</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="uncommented useMavenSettingsForAuth">
+      <created>1657467571370</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657467571370</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +118,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="uncommented useMavenSettingsForAuth" />
+    <option name="LAST_COMMIT_MESSAGE" value="uncommented useMavenSettingsForAuth" />
   </component>
 </project>

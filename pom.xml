@@ -101,7 +101,7 @@
                 <configuration>
                     <repository>sommovir/java-injection</repository>
                     <tag>badge-pool</tag>
-                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+<!--                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>-->
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
