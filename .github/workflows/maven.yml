@@ -32,6 +32,6 @@ jobs:
       with:
         username: ${{ secrets.MAVEN_NAME }}
         password: ${{ secrets.MAVEN_TOKEN }}
-        repository: reposilite-repository::Reposilite Repository::https://repo.java-injection.dev/snapshots
+        repository: reposilite-repository::default::https://repo.java-injection.dev/snapshots
 
         
