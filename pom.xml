@@ -6,9 +6,12 @@
 
     <distributionManagement>
         <repository>
-            <id>internal.repo</id>
-            <name>Internal repo</name>
-            <url>/home/dev/maven</url>
+                <id>reposilite-repository</id>
+                <name>Reposilite Repository</name>
+                <url>https://repo.java-injection.dev/badge-pool</url>
+<!--            <id>internal.repo</id>-->
+<!--            <name>Internal repo</name>-->
+<!--            <url>/home/dev/maven</url>-->
 <!--            <url>file:///D:\davinci\myvideos\miniv3</url>-->
         </repository>
     </distributionManagement>
