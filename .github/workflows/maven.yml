@@ -28,7 +28,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      with:
-        username: ${{ secrets.REPO_JI_MAVEN_USER }}
-        password: ${{ secrets.REPO_JI_MAVEN_PASSWORD }}
-        run: mvn -B package deploy --file pom.xml
+      run: mvn -B package deploy --file pom.xml
+      env:
+        MAVEN_NAME: ${{ secrets.REPO_JI_MAVEN_USER }}
+        MAVEN_TOKEN: ${{ secrets.REPO_JI_MAVEN_PASSWORD }}
+        
