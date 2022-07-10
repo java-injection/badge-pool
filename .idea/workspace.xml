@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1657292858337</updated>
       <workItem from="1657292860029" duration="25355000" />
-      <workItem from="1657365762869" duration="7529000" />
+      <workItem from="1657365762869" duration="13113000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>
