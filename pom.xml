@@ -8,7 +8,7 @@
         <repository>
                 <id>reposilite-repository</id>
                 <name>Reposilite Repository</name>
-                <url>https://repo.java-injection.dev/badge-pool</url>
+                <url>https://repo.java-injection.dev/snapshots</url>
 <!--            <id>internal.repo</id>-->
 <!--            <name>Internal repo</name>-->
 <!--            <url>/home/dev/maven</url>-->
