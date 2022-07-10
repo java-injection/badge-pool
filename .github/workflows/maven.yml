@@ -30,8 +30,8 @@ jobs:
     - name: Build with Maven
       run: mvn -B package deploy --file pom.xml
       env:
-        MAVEN_NAME: ${{ secrets.REPO_JI_MAVEN_USER }}
-        MAVEN_TOKEN: ${{ secrets.REPO_JI_MAVEN_PASSWORD }}
+        MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
+        MAVEN_TOKEN: ${{ secrets.MAVEN_TOKEN }}
         USER_NAME: ${{ secrets.REPO_JI_MAVEN_USER }}
         ACCESS_TOKEN: ${{ secrets.REPO_JI_MAVEN_PASSWORD }}
         
