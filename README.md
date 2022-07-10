@@ -2,3 +2,7 @@
 
 # badge-pool
 Mini server http per la generazione di badge di github per i nostri repository. 
+
+run on docker with:
+
+run -d -p 7070:7070 badge
