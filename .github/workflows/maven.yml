@@ -32,4 +32,6 @@ jobs:
       env:
         MAVEN_NAME: ${{ secrets.REPO_JI_MAVEN_USER }}
         MAVEN_TOKEN: ${{ secrets.REPO_JI_MAVEN_PASSWORD }}
+        USER_NAME: ${{ secrets.REPO_JI_MAVEN_USER }}
+        ACCESS_TOKEN: ${{ secrets.REPO_JI_MAVEN_PASSWORD }}
         
