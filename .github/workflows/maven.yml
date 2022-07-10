@@ -27,9 +27,11 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    - name: Publish with Maven
-      run: mvn -B package deploy --file pom.xml
-      env:
-        MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
-        MAVEN_TOKEN: ${{ secrets.MAVEN_TOKEN }}
+    - name: Deploy
+      uses: simontunnat/action-maven-deploy@v1.1
+      with:
+        username: ${{ secrets.MAVEN_NAME }}
+        password: ${{ secrets.MAVEN_TOKEN }}
+        repository: https://repo.java-injection.dev/snapshots
+
         
