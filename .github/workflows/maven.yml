@@ -27,7 +27,7 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Publish with Maven
       run: mvn -B package deploy --file pom.xml
       env:
         MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
