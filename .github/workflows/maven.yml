@@ -35,12 +35,10 @@ jobs:
             "username": "${{ secrets.MAVEN_NAME }}",
             "password": "${{ secrets.MAVEN_TOKEN }}"
           }]
-    - name: clean
-      run: mvn -DRunningOnCi=true clean --file pom.xml --batch-mode
     - name: mvn compile
-      run: mvn -DRunningOnCi=true compile deploy --file pom.xml --batch-mode
+      run: mvn -DRunningOnCi=true clean install -Dmaven.test.skip=true --file pom.xml --batch-mode
     - name: mvn test
-      run: mvn -DRunningOnCi=true surefire:test deploy --file pom.xml --batch-mode      
+      run: mvn -DRunningOnCi=true surefire:test --file pom.xml --batch-mode      
     - name: Publish with Maven
       run: mvn -DRunningOnCi=true deploy -Dmaven.test.skip=true -Dmaven.install.skip=true --file pom.xml --batch-mode
 
