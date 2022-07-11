@@ -1,5 +1,7 @@
 package com.ji.badge.server;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.ji.badge.cli.CliColors;
 import com.ji.badge.server.data.TestData;
@@ -48,9 +50,10 @@ public class BadgePoolServer {
         System.out.println("[BadgePool] stopping the server..\t" + CliColors.RED_BLOODY.code()+"SUCCESS"+CliColors.ANSI_RESET.code());
     }
 
-    public String generateTestData(){
-        Gson gson = new Gson();
+    public String generateTestData() throws JsonProcessingException {
+        //Gson gson = new Gson();
+        ObjectMapper mapper = new ObjectMapper();
         TestData td = new TestData(new Date(), true, 33);
-        return gson.toJson(td);
+        return mapper.writeValueAsString(td);
     }
 }

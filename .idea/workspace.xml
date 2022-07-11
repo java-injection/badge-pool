@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="uncommented useMavenSettingsForAuth">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/ji/badge/server/BadgePoolServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/data/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/data/TestData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
       <list>
         <option value="Class" />
         <option value="Record" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -38,13 +43,26 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ji.badge.server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BadgePoolServerTest.generateTestData">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ji.badge.Main" />
       <module name="badge-pool" />
@@ -54,6 +72,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BadgePoolServerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="badge-pool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ji.badge.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ji.badge.server" />
+      <option name="MAIN_CLASS_NAME" value="com.ji.badge.server.BadgePoolServerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BadgePoolServerTest.generateTestData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="badge-pool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ji.badge.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ji.badge.server" />
+      <option name="MAIN_CLASS_NAME" value="com.ji.badge.server.BadgePoolServerTest" />
+      <option name="METHOD_NAME" value="generateTestData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,6 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BadgePoolServerTest.generateTestData" />
+        <item itemvalue="JUnit.BadgePoolServerTest" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.Main" />
       </list>
@@ -83,7 +134,8 @@
       <option name="presentableId" value="Default" />
       <updated>1657292858337</updated>
       <workItem from="1657292860029" duration="25355000" />
-      <workItem from="1657365762869" duration="18995000" />
+      <workItem from="1657365762869" duration="23322000" />
+      <workItem from="1657534819410" duration="2370000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>
