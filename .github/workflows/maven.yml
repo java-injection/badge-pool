@@ -27,8 +27,6 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    - name: Grant execute permission for mvnw
-      run: chmod +x ./mvnw
     - uses: s4u/maven-settings-action@v2.6.0
       with:
         servers: |
@@ -38,6 +36,6 @@ jobs:
             "password": "${{ secrets.MAVEN_SECRET }}"
           }]
     - name: Publish with Maven
-      run: ./mvnw -DRunningOnCi=true clean deploy --file pom.xml --batch-mode --fail-never
+      run: mvn -DRunningOnCi=true clean deploy --file pom.xml --batch-mode --fail-never
 
         
