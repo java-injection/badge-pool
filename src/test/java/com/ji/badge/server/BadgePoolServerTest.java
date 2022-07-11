@@ -35,6 +35,7 @@ class BadgePoolServerTest {
 
     @Test
     void generateTestData() {
+        System.out.println("[JUnit] testing - generateTestData");
         String s = null;
         try {
             s = BadgePoolServer.getInstance().generateTestData();
@@ -51,6 +52,7 @@ class BadgePoolServerTest {
             fail("fail badly");
 
         }
+        System.out.println("SUCCESS");
 
 
     }

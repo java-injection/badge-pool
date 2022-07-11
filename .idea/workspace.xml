@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="uncommented useMavenSettingsForAuth">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/ji/badge/server/BadgePoolServerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/data/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/data/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ji/badge/server/BadgePoolServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ji/badge/server/BadgePoolServerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
       <recent name="com.ji.badge.server" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BadgePoolServerTest.generateTestData">
+  <component name="RunManager" selected="JUnit.BadgePoolServerTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ji.badge.Main" />
       <module name="badge-pool" />
@@ -118,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BadgePoolServerTest.generateTestData" />
         <item itemvalue="JUnit.BadgePoolServerTest" />
+        <item itemvalue="JUnit.BadgePoolServerTest.generateTestData" />
         <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Application.Main" />
       </list>
@@ -135,7 +133,7 @@
       <updated>1657292858337</updated>
       <workItem from="1657292860029" duration="25355000" />
       <workItem from="1657365762869" duration="23322000" />
-      <workItem from="1657534819410" duration="2370000" />
+      <workItem from="1657534819410" duration="3241000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>
@@ -172,5 +170,10 @@
     <MESSAGE value="init" />
     <MESSAGE value="uncommented useMavenSettingsForAuth" />
     <option name="LAST_COMMIT_MESSAGE" value="uncommented useMavenSettingsForAuth" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/badge_pool$BadgePoolServerTest_generateTestData.ic" NAME="BadgePoolServerTest.generateTestData Coverage Results" MODIFIED="1657539128005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ji.badge.server.*</FILTER>
+    </SUITE>
   </component>
 </project>
