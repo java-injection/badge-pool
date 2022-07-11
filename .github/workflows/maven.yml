@@ -33,7 +33,7 @@ jobs:
           [{
             "id": "reposilite-repository",
             "username": "${{ secrets.MAVEN_NAME }}",
-            "password": "${{ secrets.MAVEN_SECRET }}"
+            "password": "${{ secrets.MAVEN_TOKEN }}"
           }]
     - name: Publish with Maven
       run: mvn -DRunningOnCi=true clean deploy --file pom.xml --batch-mode
