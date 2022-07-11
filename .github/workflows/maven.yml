@@ -27,13 +27,17 @@ jobs:
         java-version: '18'
         distribution: 'temurin'
         cache: maven
-    - name: Deploy
-      uses: simontunnat/action-maven-deploy@v1.1
-      env:
-        MAVEN_OPTS: -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3
+    - name: Grant execute permission for mvnw
+      run: chmod +x ./mvnw
+    - uses: s4u/maven-settings-action@v2.6.0
       with:
-        username: ${{ secrets.MAVEN_NAME }}
-        password: ${{ secrets.MAVEN_TOKEN }}
-        repository: reposilite-repository::default::https://repo.java-injection.dev/snapshots
+        servers: |
+          [{
+            "id": "reposilite-repository",
+            "username": "${{ secrets.MAVEN_NAME }}",
+            "password": "${{ secrets.MAVEN_SECRET }}"
+          }]
+    - name: Publish with Maven
+      run: ./mvnw -DRunningOnCi=true clean deploy --file pom.xml --batch-mode --fail-never
 
         
