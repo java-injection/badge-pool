@@ -21,7 +21,7 @@ public class FakeDB {
 
     }
 
-    public FakeDB getInstance(){
+    public static FakeDB getInstance(){
         if(_instance == null){
             _instance = new FakeDB();
         }
