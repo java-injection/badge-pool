@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="uncommented useMavenSettingsForAuth">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/FakeDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/exceptions/AttemptSecondLoginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/exceptions/IdNotExistingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/exceptions/UsernameAlreadyExisting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/exceptions/UsernameNotExistingException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ji/badge/server/BadgePoolServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ji/badge/server/BadgePoolServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -48,7 +55,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
@@ -60,7 +67,7 @@
       <recent name="com.ji.badge.server" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BadgePoolServerTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ji.badge.Main" />
       <module name="badge-pool" />
@@ -105,6 +112,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/badge-pool/target/site/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -116,10 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JUnit.BadgePoolServerTest" />
         <item itemvalue="JUnit.BadgePoolServerTest.generateTestData" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -134,6 +145,12 @@
       <workItem from="1657292860029" duration="25355000" />
       <workItem from="1657365762869" duration="23322000" />
       <workItem from="1657534819410" duration="3241000" />
+      <workItem from="1657540324185" duration="1322000" />
+      <workItem from="1657549207832" duration="624000" />
+      <workItem from="1657549853257" duration="4820000" />
+      <workItem from="1657554880952" duration="67000" />
+      <workItem from="1657554966331" duration="2740000" />
+      <workItem from="1657631709087" duration="5608000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>

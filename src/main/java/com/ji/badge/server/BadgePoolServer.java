@@ -39,6 +39,7 @@ public class BadgePoolServer {
         server.get("/", ctx -> ctx.result("Hello World"));
 
         server.get("/test", ctx -> ctx.result(generateTestData()));
+
         System.out.println("[BadgePool] starting server..\t" + CliColors.GREEN_BRIGHT.code()+"SUCCESS"+CliColors.ANSI_RESET.code());
 
     }
