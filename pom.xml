@@ -6,13 +6,13 @@
 
     <distributionManagement>
         <repository>
-                <id>reposilite-repository</id>
-                <name>Reposilite Repository</name>
-                <url>https://repo.java-injection.dev/snapshots</url>
-<!--            <id>internal.repo</id>-->
-<!--            <name>Internal repo</name>-->
-<!--            <url>/home/dev/maven</url>-->
-<!--            <url>file:///D:\davinci\myvideos\miniv3</url>-->
+            <id>reposilite-repository</id>
+            <name>Reposilite Repository</name>
+            <url>https://repo.java-injection.dev/snapshots</url>
+            <!--            <id>internal.repo</id>-->
+            <!--            <name>Internal repo</name>-->
+            <!--            <url>/home/dev/maven</url>-->
+            <!--            <url>file:///D:\davinci\myvideos\miniv3</url>-->
         </repository>
     </distributionManagement>
 
@@ -23,11 +23,11 @@
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
-<!--        <jacoco.version>0.8.8</jacoco.version>-->
-<!--        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>-->
-<!--        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>-->
-<!--        <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>-->
-<!--        <sonar.language>java</sonar.language>-->
+        <!--        <jacoco.version>0.8.8</jacoco.version>-->
+        <!--        <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>-->
+        <!--        <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>-->
+        <!--        <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>-->
+        <!--        <sonar.language>java</sonar.language>-->
     </properties>
 
     <dependencies>
@@ -46,7 +46,7 @@
             <artifactId>jansi</artifactId>
             <version>2.1.1</version>
         </dependency>
-<!--        ************** MOCKITO ****************-->
+        <!--        ************** MOCKITO ****************-->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -59,9 +59,9 @@
             <version>4.4.0</version>
             <scope>test</scope>
         </dependency>
-<!--        ************** END MOCKITO ****************-->
+        <!--        ************** END MOCKITO ****************-->
 
-<!--        ************** JUNIT 5 ****************-->
+        <!--        ************** JUNIT 5 ****************-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -80,9 +80,9 @@
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
-<!--        ************** END JUNIT 5 ****************-->
+        <!--        ************** END JUNIT 5 ****************-->
 
-<!--        ************** JSON ****************-->
+        <!--        ************** JSON ****************-->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -93,19 +93,18 @@
             <artifactId>gson</artifactId>
             <version>2.9.0</version>
         </dependency>
-<!--        ************** END JSON ****************-->
-<!--        <dependency>-->
-<!--            <groupId>org.openclover</groupId>-->
-<!--            <artifactId>clover-maven-plugin</artifactId>-->
-<!--            <version>4.4.1</version>-->
-<!--            <type>maven-plugin</type>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.jacoco</groupId>-->
-<!--            <artifactId>jacoco-maven-plugin</artifactId>-->
-<!--            <version>0.8.8</version>-->
-<!--        </dependency>-->
-
+        <!--        ************** END JSON ****************-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.openclover</groupId>-->
+        <!--            <artifactId>clover-maven-plugin</artifactId>-->
+        <!--            <version>4.4.1</version>-->
+        <!--            <type>maven-plugin</type>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.jacoco</groupId>-->
+        <!--            <artifactId>jacoco-maven-plugin</artifactId>-->
+        <!--            <version>0.8.8</version>-->
+        <!--        </dependency>-->
 
 
     </dependencies>
@@ -164,7 +163,9 @@
                 <configuration>
                     <repository>sommovir/java-injection</repository>
                     <tag>badge-pool</tag>
-                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+                    <!--!!!WARNING!!!  IF THE NEXT LINE IS NOT COMMENTED, GITHUB WORKFLOW WILL    F  A  I  L-->
+                    <!--!!!WARNING!!!  IF THE NEXT LINE IS     COMMENTED, LOCAL RUN WILL          F  A  I  L-->
+<!--                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>-->
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
@@ -175,21 +176,21 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.openclover</groupId>-->
-<!--                <artifactId>clover-maven-plugin</artifactId>-->
-<!--                <version>4.4.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>generate-sources</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>instrument</goal>-->
-<!--                            <goal>aggregate</goal>-->
-<!--                            <goal>clover</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.openclover</groupId>-->
+            <!--                <artifactId>clover-maven-plugin</artifactId>-->
+            <!--                <version>4.4.1</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <phase>generate-sources</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>instrument</goal>-->
+            <!--                            <goal>aggregate</goal>-->
+            <!--                            <goal>clover</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
@@ -201,52 +202,52 @@
                 <version>3.0.0</version>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.jacoco</groupId>-->
-<!--                <artifactId>jacoco-maven-plugin</artifactId>-->
-<!--                <version>0.8.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>jacoco-initialize</id>-->
-<!--                        <goals>-->
-<!--                            <goal>prepare-agent</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                    <execution>-->
-<!--                        <id>jacoco-site</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>report</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.jacoco</groupId>-->
+            <!--                <artifactId>jacoco-maven-plugin</artifactId>-->
+            <!--                <version>0.8.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>jacoco-initialize</id>-->
+            <!--                        <goals>-->
+            <!--                            <goal>prepare-agent</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                    <execution>-->
+            <!--                        <id>jacoco-site</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>report</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
 
 
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-shade-plugin</artifactId>-->
-<!--                <version>3.3.0</version>-->
-<!--                <executions>-->
-<!--                    &lt;!&ndash; Run shade goal on package phase &ndash;&gt;-->
-<!--                    <execution>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>shade</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <shadedArtifactAttached>true</shadedArtifactAttached>-->
-<!--                            <transformers>-->
-<!--                                &lt;!&ndash; add Main-Class to manifest file &ndash;&gt;-->
-<!--                                <transformer-->
-<!--                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
-<!--                                    <mainClass>com.ji.badge.Main</mainClass>-->
-<!--                                </transformer>-->
-<!--                            </transformers>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-shade-plugin</artifactId>-->
+            <!--                <version>3.3.0</version>-->
+            <!--                <executions>-->
+            <!--                    &lt;!&ndash; Run shade goal on package phase &ndash;&gt;-->
+            <!--                    <execution>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>shade</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <shadedArtifactAttached>true</shadedArtifactAttached>-->
+            <!--                            <transformers>-->
+            <!--                                &lt;!&ndash; add Main-Class to manifest file &ndash;&gt;-->
+            <!--                                <transformer-->
+            <!--                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">-->
+            <!--                                    <mainClass>com.ji.badge.Main</mainClass>-->
+            <!--                                </transformer>-->
+            <!--                            </transformers>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 

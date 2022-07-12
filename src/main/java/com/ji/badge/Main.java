@@ -2,6 +2,7 @@ package com.ji.badge;
 
 import com.ji.badge.cli.CliColors;
 import com.ji.badge.cli.CliStandards;
+import com.ji.badge.logic.test.FakeDB;
 import com.ji.badge.server.BadgePoolServer;
 import org.fusesource.jansi.AnsiConsole;
 
@@ -10,9 +11,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         AnsiConsole.systemInstall();
-       // CliStandards.title("Developed by");
-       // System.out.println(CliStandards.JAVA_INJECTION);
-       // CliStandards.closeTitle("Developed by");
+        // CliStandards.title("Developed by");
+        // System.out.println(CliStandards.JAVA_INJECTION);
+        // CliStandards.closeTitle("Developed by");
 
         //String text = new CliStandards.ChainedString("Developed by").withBody(CliStandards.JAVA_INJECTION).close().build();
 
@@ -23,19 +24,23 @@ public class Main {
                 newBlock(CliStandards.BADGE_POOL, CliColors.RED_BLOODY).
                 close().br().addLine().
                 build();
-        System.out.println("\n"+welcomeMessage);
+        System.out.println("\n" + welcomeMessage);
         System.out.println("[BadgePool] starting server..");
         BadgePoolServer.getInstance().start();
         System.out.println("-- end --");
         Scanner scanner = new Scanner(System.in);
-        while(scanner.hasNextLine()){
+        while (scanner.hasNextLine()) {
             String command = scanner.nextLine();
-            if(command.equals("quit")){
+            if (command.equals("start server")) {
+                BadgePoolServer.getInstance().start();
+            } else if (command.equals("stop server")) {
                 BadgePoolServer.getInstance().stop();
-            }else if(command.equals("exit")){
+            } else if (command.equals("test")) {
+                FakeDB.getInstance().initWithFakeData();
+            }  else if (command.equals("exit")) {
                 System.out.println(("bye."));
                 return;
-            } else{
+            } else {
                 System.out.println("[BadgePool] comando sconosciuto..");
             }
         }

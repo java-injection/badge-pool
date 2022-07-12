@@ -1,5 +1,7 @@
 package com.ji.badge.logic.test;
 
+import com.ji.badge.cli.CliColors;
+import com.ji.badge.cli.CliLogger;
 import com.ji.badge.logic.test.exceptions.AttemptSecondLoginException;
 import com.ji.badge.logic.test.exceptions.IdNotExistingException;
 import com.ji.badge.logic.test.exceptions.UsernameAlreadyExisting;
@@ -40,7 +42,7 @@ public class FakeDB {
     }
 
     public int register(String username, String password) throws UsernameAlreadyExisting {
-        if(!this.userTable.containsKey(username)){
+        if(this.userTable.containsKey(username)){
             throw new UsernameAlreadyExisting(username);
         }
 
@@ -65,6 +67,22 @@ public class FakeDB {
         return this.userTable.values().stream()
                 .filter(a -> this.onlineAccount.contains(a.getUsername()))
                 .collect(Collectors.toList());
+    }
+
+
+
+    public void initWithFakeData(){
+        try {
+            CliLogger.info("adding 4 fake accounts.. ");
+            this.register("luca.coraci","123");
+            this.register("amicone","1234");
+            this.register("capuozzo","111123");
+            this.register("tossico","0000");
+            CliLogger.info("fake accounts have been added.");
+        }
+        catch (UsernameAlreadyExisting e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
