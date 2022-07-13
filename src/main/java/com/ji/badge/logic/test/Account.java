@@ -10,6 +10,10 @@ public class Account {
     private int money;
     private List<Game> games;
 
+    public Account(){
+
+    }
+
     public Account(int id, String username, String password, int money) {
         this.id = id;
         this.username = username;
@@ -22,6 +26,15 @@ public class Account {
         this.username = username;
         this.password = password;
         this.money = money;
+    }
+
+
+    public Account(String username, String password, int money, List<Game> games) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.money = money;
+        this.games = games;
     }
 
     public int getId() {

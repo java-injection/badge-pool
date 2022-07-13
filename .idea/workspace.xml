@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="uncommented useMavenSettingsForAuth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/logic/test/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +145,7 @@
       <workItem from="1657554880952" duration="67000" />
       <workItem from="1657554966331" duration="2740000" />
       <workItem from="1657631709087" duration="10306000" />
-      <workItem from="1657715136338" duration="2945000" />
+      <workItem from="1657715136338" duration="5381000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>

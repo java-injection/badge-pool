@@ -8,6 +8,7 @@ import com.ji.badge.logic.test.Account;
 import com.ji.badge.logic.test.FakeDB;
 import com.ji.badge.server.data.TestData;
 import io.javalin.Javalin;
+import io.javalin.plugin.json.JavalinJackson;
 
 import java.util.Date;
 
@@ -18,6 +19,8 @@ public class BadgePoolServer {
     private static BadgePoolServer _instance = null;
     private Javalin server = null;
     private Thread serverThread;
+
+    private ObjectMapper objectMapper = new ObjectMapper();
 
     private BadgePoolServer() {
 
@@ -35,6 +38,7 @@ public class BadgePoolServer {
             @Override
             public void run() {
                 server = Javalin.create().start(7070);
+
                 server.ws("/console", ws -> {
                     ws.onConnect(ctx -> System.out.println("Connected"));
                 });
@@ -49,11 +53,11 @@ public class BadgePoolServer {
                     });
                 });
 
-                server.post("/register", ctx -> {
-                    Account account = ctx.bodyAsClass(Account.class);
-                    FakeDB.getInstance().register(account.getUsername(),account.getPassword());
+                server.post("register", ctx -> {
+                    Account account = objectMapper.readValue(ctx.body(), Account.class);
+                    int id = FakeDB.getInstance().register(account.getUsername(),account.getPassword());
                     System.out.println("account id: "+account.getId());
-                    ctx.result(""+account.getId());
+                    ctx.result(""+id);
                 });
 
                 
