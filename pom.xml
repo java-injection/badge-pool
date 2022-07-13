@@ -165,7 +165,7 @@
                     <tag>badge-pool</tag>
                     <!--!!!WARNING!!!  IF THE NEXT LINE IS NOT COMMENTED, GITHUB WORKFLOW WILL    F  A  I  L-->
                     <!--!!!WARNING!!!  IF THE NEXT LINE IS     COMMENTED, LOCAL RUN WILL          F  A  I  L-->
-<!--                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>-->
+                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c37fb393-da5f-453a-88be-b8b45f291d08" name="Changes" comment="uncommented useMavenSettingsForAuth">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyOutputFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MyOutputFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ji/badge/server/BadgePoolServer.java" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +153,11 @@
       <workItem from="1657549853257" duration="4820000" />
       <workItem from="1657554880952" duration="67000" />
       <workItem from="1657554966331" duration="2740000" />
+<<<<<<< HEAD
       <workItem from="1657631709087" duration="18312000" />
+=======
+      <workItem from="1657631709087" duration="17653000" />
+>>>>>>> master
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1657301875211</created>
