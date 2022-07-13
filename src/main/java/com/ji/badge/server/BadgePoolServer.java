@@ -21,6 +21,7 @@ public class BadgePoolServer {
     private Thread serverThread;
 
     private ObjectMapper objectMapper = new ObjectMapper();
+    private boolean online = false;
 
     private BadgePoolServer() {
 
@@ -31,6 +32,10 @@ public class BadgePoolServer {
             _instance = new BadgePoolServer();
         }
         return _instance;
+    }
+
+    public boolean isOnline() {
+        return online;
     }
 
     public void start() {
@@ -64,7 +69,7 @@ public class BadgePoolServer {
                 server.get("/accounts", ctx -> ctx.result(
                         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(FakeDB.getInstance().getAccounts())));
 
-
+                online = true;
                 System.out.println("[BadgePool] starting server..\t" + CliColors.GREEN_BRIGHT.code() + "SUCCESS" + CliColors.ANSI_RESET.code());
             }
         });
@@ -82,6 +87,7 @@ public class BadgePoolServer {
         server.stop();
         serverThread.interrupt();
         System.out.println("[BadgePool] stopping the server..\t" + CliColors.RED_BLOODY.code() + "SUCCESS" + CliColors.ANSI_RESET.code());
+        online = false;
     }
 
     public String generateTestData() throws JsonProcessingException {
