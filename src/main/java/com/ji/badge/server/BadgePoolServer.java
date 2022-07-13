@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.ji.badge.cli.CliColors;
+import com.ji.badge.logic.test.Account;
 import com.ji.badge.logic.test.FakeDB;
 import com.ji.badge.server.data.TestData;
 import io.javalin.Javalin;
@@ -34,6 +35,9 @@ public class BadgePoolServer {
             @Override
             public void run() {
                 server = Javalin.create().start(7070);
+                server.ws("/console", ws -> {
+                    ws.onConnect(ctx -> System.out.println("Connected"));
+                });
                 server.get("/", ctx -> ctx.result("Hello World 2"));
                 server.get("/test", ctx -> ctx.result(generateTestData()));
                 server.routes(() -> {
@@ -44,6 +48,14 @@ public class BadgePoolServer {
                         });
                     });
                 });
+
+                server.post("/register", ctx -> {
+                    Account account = ctx.bodyAsClass(Account.class);
+                    FakeDB.getInstance().register(account.getUsername(),account.getPassword());
+                    System.out.println("account id: "+account.getId());
+                    ctx.result(""+account.getId());
+                });
+
                 
                 server.get("/accounts", ctx -> ctx.result(
                         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(FakeDB.getInstance().getAccounts())));
