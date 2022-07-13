@@ -9,6 +9,10 @@ import com.ji.badge.logic.test.FakeDB;
 import com.ji.badge.server.data.TestData;
 import io.javalin.Javalin;
 import io.javalin.plugin.json.JavalinJackson;
+import io.javalin.plugin.openapi.OpenApiOptions;
+import io.javalin.plugin.openapi.OpenApiPlugin;
+import io.javalin.plugin.openapi.ui.SwaggerOptions;
+import io.swagger.v3.oas.models.info.Info;
 
 import java.util.Date;
 
@@ -38,11 +42,29 @@ public class BadgePoolServer {
         return online;
     }
 
+    private OpenApiOptions getOpenApiOptions() {
+        Info applicationInfo = new Info()
+                .version("1.0")
+                .description("Badge-Pool");
+        return new OpenApiOptions(applicationInfo)
+                .path("/docs")
+                .swagger(new SwaggerOptions("/swagger").title("My Swagger Documentation"));
+    }
+
     public void start() {
         serverThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                server = Javalin.create().start(7070);
+
+
+
+                server = Javalin.create(
+                        config -> {
+                            config.registerPlugin(new OpenApiPlugin(getOpenApiOptions()));
+                        }
+
+
+                ).start(7070);
 
                 server.ws("/console", ws -> {
                     ws.onConnect(ctx -> System.out.println("Connected"));
