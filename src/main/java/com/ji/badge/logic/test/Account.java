@@ -1,5 +1,8 @@
 package com.ji.badge.logic.test;
 
+import kotlin.collections.ArrayDeque;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Account {
@@ -8,7 +11,7 @@ public class Account {
     private String username;
     private String password;
     private int money;
-    private List<Game> games;
+    private List<Game> games = new ArrayList<>();
 
     public Account(){
 

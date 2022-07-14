@@ -40,11 +40,17 @@ public class Main {
                 BadgePoolServer.getInstance().stop();
             } else if (command.equals("test")) {
                 FakeDB.getInstance().initWithFakeData();
+            } else if (command.equals("test -w")) {
+                FakeDB.getInstance().initWithFakeDataAndGame();
             }  else if (command.equals("exit")) {
                 System.out.println(("bye."));
                 return;
             } else if (command.equals("version")) {
                 CliLogger.info(" Version: "+ version);
+            }else if (command.equals("reset")) {
+                FakeDB.getInstance().reset();
+            }else if (command.equals("reset -w")) {
+                FakeDB.getInstance().resetWithAccountsAndGame();
             }else if (command.equals("status")) {
                 if(BadgePoolServer.getInstance().isOnline()){
                     CliLogger.info("Server is "+CliColors.GREEN_BRIGHT.code()+"ONLINE"+CliColors.ANSI_RESET.code());

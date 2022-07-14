@@ -95,6 +95,20 @@ public class BadgePoolServer {
                                     );
                                 });
                             });
+                            path("/reset/{withgames}" ,() -> {
+                                patch(ctx -> {
+                                            boolean withGames = Boolean.parseBoolean(ctx.pathParam("withgames"));
+                                            CliLogger.warning("Resetting accounts table .. [withgames="+withGames+"]");
+                                            if(withGames){
+                                                FakeDB.getInstance().resetWithAccountsAndGame();
+                                            }else{
+                                                FakeDB.getInstance().reset();
+                                            }
+                                            ctx.result("ok fra");
+                                            ctx.status(201);
+                                        }
+                                );
+                            });
                         });
                     });
                 });
