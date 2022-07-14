@@ -69,6 +69,9 @@ public class Account {
         this.money = money;
     }
 
+    public void addMoney(int money){
+        this.money+=money;
+    }
     public List<Game> getGames() {
         return games;
     }

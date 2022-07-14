@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.ji.badge.cli.CliColors;
+import com.ji.badge.cli.CliLogger;
 import com.ji.badge.logic.test.Account;
 import com.ji.badge.logic.test.FakeDB;
 import com.ji.badge.server.data.TestData;
@@ -16,8 +17,7 @@ import io.swagger.v3.oas.models.info.Info;
 
 import java.util.Date;
 
-import static io.javalin.apibuilder.ApiBuilder.get;
-import static io.javalin.apibuilder.ApiBuilder.path;
+import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class BadgePoolServer {
     private static BadgePoolServer _instance = null;
@@ -48,7 +48,7 @@ public class BadgePoolServer {
                 .description("Badge-Pool");
         return new OpenApiOptions(applicationInfo)
                 .path("/docs")
-                .swagger(new SwaggerOptions("/swagger").title("My Swagger Documentation"));
+                .swagger(new SwaggerOptions("/swagger").title("Badge-Pool Documentation"));
     }
 
     public void start() {
@@ -76,6 +76,25 @@ public class BadgePoolServer {
                         path("/accounts", () -> {
                             get(ctx -> ctx.result(
                                     new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(FakeDB.getInstance().getAccounts())));
+                            path("/{id}" ,() -> {
+                                get(ctx -> {
+                                        int id = Integer.parseInt(ctx.pathParam("id"));
+                                            CliLogger.info("retrieving Account data with id: "+id);
+                                        ctx.result(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(FakeDB.getInstance().getAccountByID(id)));
+                                }
+                                );
+                                path("/addmoney/{money}" ,() -> {
+                                    patch(ctx -> {
+                                                int money = Integer.parseInt(ctx.pathParam("money"));
+                                                int id = Integer.parseInt(ctx.pathParam("id"));
+                                                CliLogger.info("adding "+money+" € to the account with id: "+id);
+                                                FakeDB.getInstance().addMoneyToAccount(id, money);
+                                                ctx.result("ok fra");
+                                                ctx.status(201);
+                                            }
+                                    );
+                                });
+                            });
                         });
                     });
                 });

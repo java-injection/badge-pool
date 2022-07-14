@@ -59,6 +59,13 @@ public class FakeDB {
                 .orElseThrow(() -> new IdNotExistingException(id));
     }
 
+    public void addMoneyToAccount(int id, int money) throws IdNotExistingException {
+        this.userTable.values().stream()
+                .filter(a -> a.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new IdNotExistingException(id)).addMoney(money);
+    }
+
     public Collection<Account> getAccounts(){
         return this.userTable.values();
     }
