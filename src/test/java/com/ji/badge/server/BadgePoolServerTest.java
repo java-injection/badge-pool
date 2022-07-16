@@ -56,4 +56,9 @@ class BadgePoolServerTest {
 
 
     }
+
+    @Test
+    void isOnline() {
+        assertEquals(false, BadgePoolServer.getInstance().isOnline());
+    }
 }
