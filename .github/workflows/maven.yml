@@ -53,6 +53,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=badge-pool
+    - name: Sonar Coverage
+      run: mvn sonar:sonar -Pcoverage
     - name: Compile, Test and Deploy with Maven
       run: mvn -DRunningOnCi=true clean deploy --file pom.xml --batch-mode
 

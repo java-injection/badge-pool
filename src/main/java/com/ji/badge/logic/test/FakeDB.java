@@ -93,6 +93,13 @@ public class FakeDB {
         }
     }
 
+    public boolean maggioreAge(int age){
+        if(age > 18){
+            return true;
+        }
+        return false;
+    }
+
     public final void reset(){
         this.userTable.clear();
         progressiveID = 1;
