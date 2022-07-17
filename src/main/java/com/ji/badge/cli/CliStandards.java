@@ -67,6 +67,56 @@ public class CliStandards {
             CliColors.RED_BLOODY.code());
 
 
+    public static final String JAVA_INJECTION_BADGE_WEB = "<svg\n" +
+            "\txmlns=\"http://www.w3.org/2000/svg\" height=\"20\" width=\"151\">\n" +
+            "\t<!-- SONARQUBE MEASURE -->\n" +
+            "\t<linearGradient id=\"b\" x2=\"0\" y2=\"100%\">\n" +
+            "\t\t<stop offset=\"0\" stop-color=\"#bbb\" stop-opacity=\".1\"/>\n" +
+            "\t\t<stop offset=\"1\" stop-opacity=\".1\"/>\n" +
+            "\t</linearGradient>\n" +
+            "\t<clipPath id=\"a\">\n" +
+            "\t\t<rect width=\"141\" height=\"20\" rx=\"3\" fill=\"#fff\"/>\n" +
+            "\t</clipPath>\n" +
+            "\t<g clip-path=\"url(#a)\">\n" +
+            "\t\t<rect fill=\"#333\" height=\"20\" width=\"122\"/>\n" +
+            "\t\t<rect fill=\"#2136A1\" height=\"20\" width=\"69\" x=\"102\"/>\n" +
+            "\t\t<rect fill=\"url(#b)\" height=\"20\" width=\"171\"/>\n" +
+            "\t</g>\n" +
+            "\t<g fill=\"#fff\" font-family=\"DejaVu Sans,Verdana,Geneva,sans-serif\" font-size=\"11\" text-anchor=\"left\">\n" +
+            "\t\t<text x=\"26\" y=\"15\" textLength=\"70\" fill=\"#010101\" fill-opacity=\".3\">Java-Injection</text>\n" +
+            "\t\t<text x=\"26\" y=\"14\" textLength=\"70\">Java-Injection</text>\n" +
+            "\t\t<text x=\"108\" y=\"15\" textLength=\"25\" fill=\"#010101\" fill-opacity=\".3\">Web</text>\n" +
+            "\t\t<text x=\"108\" y=\"14\" textLength=\"25\">Web</text>\n" +
+            "\t</g>\n" +
+            "<g transform=\"translate(5.000000,18.000000) scale(0.100000,-0.100000)\"\n" +
+            "fill=\"#21753D\" stroke=\"none\">\n" +
+            "<path d=\"M143 148 c-22 -28 -23 -48 -3 -48 16 0 20 7 20 30 0 33 -3 36 -17 18z\"/>\n" +
+            "<path d=\"M0 75 c0 -20 28 -56 51 -66 37 -15 82 2 98 37 14 32 14 34 -7 34 -9\n" +
+            "0 -23 -9 -30 -20 -7 -11 -21 -20 -32 -20 -11 0 -25 9 -32 20 -11 17 -48 29\n" +
+            "-48 15z\"/>\n" +
+            "</g>\n" +
+            "</svg>";
+
+
+    public static final String JAVA_INJECTION_SVG_LOGO = "<?xml version=\\\"1.0\\\" standalone=\\\"no\\\"?>\\n\" +\n" +
+            "                            \"<!DOCTYPE svg PUBLIC \\\"-//W3C//DTD SVG 20010904//EN\\\"\\n\" +\n" +
+            "                            \" \\\"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd\\\">\\n\" +\n" +
+            "                            \"<svg version=\\\"1.0\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\"\\n\" +\n" +
+            "                            \" width=\\\"498.000000pt\\\" height=\\\"500.000000pt\\\" viewBox=\\\"0 0 498.000000 500.000000\\\"\\n\" +\n" +
+            "                            \" preserveAspectRatio=\\\"xMidYMid meet\\\">\\n\" +\n" +
+            "                            \"\\n\" +\n" +
+            "                            \"<g transform=\\\"translate(0.000000,500.000000) scale(0.100000,-0.100000)\\\"\\n\" +\n" +
+            "                            \"fill=\\\"#000000\\\" stroke=\\\"none\\\">\\n\" +\n" +
+            "                            \"<path d=\\\"M4921 4984 c-117 -31 -275 -141 -435 -300 -345 -345 -602 -825 -700\\n\" +\n" +
+            "                            \"-1307 -23 -114 -39 -236 -50 -384 l-4 -63 624 0 624 0 0 1035 c0 569 -1 1035\\n\" +\n" +
+            "                            \"-2 1034 -2 0 -27 -7 -57 -15z\\\"/>\\n\" +\n" +
+            "                            \"<path d=\\\"M0 2483 c0 -5 5 -71 10 -148 38 -530 225 -1010 554 -1415 323 -398\\n\" +\n" +
+            "                            \"791 -702 1280 -831 1036 -273 2116 133 2711 1021 248 370 382 768 415 1225 5\\n\" +\n" +
+            "                            \"77 10 143 10 148 0 4 -278 7 -618 7 l-618 0 -12 -112 c-59 -560 -452 -997\\n\" +\n" +
+            "                            \"-1002 -1114 -116 -24 -352 -25 -473 -1 -248 50 -467 167 -647 347 -217 217\\n\" +\n" +
+            "                            \"-339 483 -366 798 l-7 82 -618 0 c-341 0 -619 -3 -619 -7z\\\"/>\\n\" +\n" +
+            "                            \"</g>\\n\" +\n" +
+            "                            \"</svg>";
 
     /**
      * return a formatted fancy title string with the title in the middle

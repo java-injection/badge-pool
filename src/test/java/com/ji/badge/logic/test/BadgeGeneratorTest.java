@@ -1,5 +1,6 @@
 package com.ji.badge.logic.test;
 
+import com.ji.badge.logic.BadgeGenerator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package com.ji.badge.logic.test;
+package com.ji.badge.logic;
 
 import com.ji.badge.cli.CliLogger;
 import kotlin.Pair;
