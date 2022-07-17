@@ -61,9 +61,8 @@ class BadgeGeneratorTest {
                 "    </g>\n" +
                 "</svg>";
 
-            String betterBadge = BadgeGenerator.sonarBadgeFix(sampleBadBadge);
-            assertEquals(betterBadge,correctedBadge,"il colore dovrebbe cambiare perché sotto il 10%");
-        System.out.println("ok");
+        String okBadge = BadgeGenerator.sonarBadgeFix(sampleBadBadge, 3.2f);
+        assertEquals(correctedBadge, okBadge);
 
 
     }
