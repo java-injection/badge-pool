@@ -3,12 +3,14 @@
     <a href="https://java-injection.it">
       <img width="50%" src="http://www.java-injection.it/wp-content/uploads/2022/06/jlogo_gra.png"><br>
       <img align="center" alt="java-injection.it" src="https://lin.java-injection.dev/badges/java-injection/web"></a>
+    <a href="https://discord.gg/sqdCMNCxxe">
+      <img align="center" alt="java-injection.it" src="https://dcbadge.vercel.app/api/server/sqdCMNCxxe?style=flat"></a>
       <br>
 </p>
 </html>
 
----
 
+---
 ![example workflow](https://github.com/java-injection/badge-pool/actions/workflows/maven.yml/badge.svg?event=push)
 [![Quality Gate Status](https://sonar.java-injection.dev/api/project_badges/measure?project=badge-pool&metric=alert_status&token=squ_fc56dc968c1432434550a5795087b7ca97654955)](https://sonar.java-injection.dev/dashboard?id=badge-pool)
 ![Coverage](https://lin.java-injection.dev/coverage/sonarqube?url=sonar.java-injection.dev&project-key=badge-pool&token=squ_fc56dc968c1432434550a5795087b7ca97654955)
