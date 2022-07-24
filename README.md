@@ -23,6 +23,8 @@
 # badge-pool
 Mini server http per la generazione di badge di github per i nostri repository. 
 
+Provvede anche a fornire dei semplici endpoints per il testing di applicazioni REST. 
+
 run on docker with:
 
 run -d -p 7070:7070 badge
