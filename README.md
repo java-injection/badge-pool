@@ -28,3 +28,5 @@ Provvede anche a fornire dei semplici endpoints per il testing di applicazioni R
 run on docker with:
 
 run -d -p 7070:7070 badge
+
+prova 
